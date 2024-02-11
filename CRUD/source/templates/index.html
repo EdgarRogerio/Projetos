@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-class">
+            <form method="post" action="{{ url_for('homepage') }}">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="all-input email-form">
+                    <label for="email"></label>
+                    <input type="text" id="" placeholder="E-mail" value="{{ form.email.data }}" required>
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="all-input senha-form">
+                    <label for="senha"></label>
+                    <input type="password" id="" placeholder="Senha" value="{{ form.senha.data }}" required>
+                    <i class="bi bi-lock"></i>
+                </div>
+                <div class="all-input confirm-senha-form">
+                    <label for="senhaconfirma"></label>
+                    <input type="password" id="" placeholder="Confirme sua Senha" value="{{ form.senhaconfirma.data }}" required>
+                    <i class="bi bi-lock"></i>
+                </div>
+                <div class="login-button">
+                    <button type="submit" name="submit" value="submit">
+                        <a href="#">
+                            Enviar
+                        </a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
